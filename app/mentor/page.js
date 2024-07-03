@@ -1,6 +1,7 @@
 import React from "react";
 import Timeline from "../components/Timeline";
 import Details from "../components/Details";
+import Image from "next/image";
 
 const Mentor = () => {
   const skills = [
@@ -16,8 +17,8 @@ const Mentor = () => {
   return (
     <div className="w-full min-h-screen flex flex-col mt-10 p-10 gap-5">
       <div className="avatar">
-        <div className="w-1/4 rounded-full">
-          <img src="/photo.jpg" />
+        <div className="w-1/4 rounded-full relative">
+          <Image src="/photo.jpg" layout="fill" objectFit="cover" alt="" />
         </div>
       </div>
       <div className="w-full mt-10 flex flex-row gap-5">
@@ -40,7 +41,10 @@ const Mentor = () => {
           </div>
           <div className="flex flex-wrap gap-3 mt-5">
             {skills.map((item, index) => (
-              <button className="bg-gray-200 text-black py-2 px-4 rounded-3xl text-xl">
+              <button
+                className="bg-gray-200 text-black py-2 px-4 rounded-3xl text-xl"
+                key={index}
+              >
                 {item}
               </button>
             ))}

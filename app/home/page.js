@@ -16,7 +16,7 @@ const HomePage = () => {
           <div
             className={`${
               isMentor == "mentor"
-                ? "border-solid border-2 border-cyan-500 w-4/5 h-2/5 "
+                ? "border-solid border-2 border-cyan-500 w-4/5 h-2/5"
                 : ""
             } transition-all duration-500 ease-in-out card w-3/4 h-1/4 bg-slate-200 shadow-2xl text-center hover:cursor-pointer`}
             onClick={() => handleSelection("mentor")}
@@ -27,9 +27,9 @@ const HomePage = () => {
                 isMentor == "mentor" ? "block" : "hidden"
               } text-xl pt-10`}
             >
-              "The delicate balance of mentoring someone is not creating them in
+              The delicate balance of mentoring someone is not creating them in
               your own image, but giving them the opportunity to create
-              themselves"
+              themselves
             </p>
           </div>
           <div
@@ -46,8 +46,8 @@ const HomePage = () => {
                 isMentor == "mentee" ? "block" : "hidden"
               } text-xl pt-10`}
             >
-              "The best mentees understand that mentorship is a two-way street,
-              requiring effort and engagement from both sides."
+              The best mentees understand that mentorship is a two-way street,
+              requiring effort and engagement from both sides.
             </p>
           </div>
         </div>
