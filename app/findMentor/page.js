@@ -10,9 +10,12 @@ const FindMentor = () => {
   useEffect(() => {
     const getMentorData = async () => {
       console.log("Fetching data ..... ");
-      const response = await fetch("http://localhost:8080/getMentors", {
-        method: "GET",
-      });
+      const response = await fetch(
+        "https://mconnect-backend-1.onrender.com/getMentors",
+        {
+          method: "GET",
+        }
+      );
 
       const data = await response.json();
       if (data && data.status == 200) {
