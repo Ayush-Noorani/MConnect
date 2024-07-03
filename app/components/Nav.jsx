@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const Nav = () => {
+  const router = useRouter();
   return (
     <div className="w-full h-20 flex flex-row justify-around text-lg items-center">
       <div className="">
@@ -8,16 +11,15 @@ const Nav = () => {
       </div>
       <div className="w-1/2 flex flex-row justify-evenly">
         <ul className="hover:border-solid rounded-full hover:border-1 hover:border-black py-1 px-10">
-          <a href="#">Home</a>
+          <a href="/findMentor" onClick={router.push("/findMentor")}>
+            Home
+          </a>
         </ul>
         <ul className="hover:border-solid rounded-full hover:border-1 hover:border-black py-1 px-10">
           <a href="#service">Service</a>
         </ul>
         <ul className="hover:border-solid rounded-full hover:border-1 hover:border-black py-1 px-10">
           <a href="#about">About</a>
-        </ul>
-        <ul className="hover:border-solid rounded-full hover:border-1 hover:border-black py-1 px-10">
-          <a href="#">Projects</a>
         </ul>
       </div>
       <div>
