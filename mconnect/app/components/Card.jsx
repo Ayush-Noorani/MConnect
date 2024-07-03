@@ -2,14 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const CardComponent = ({ mentors }) => {
   const router = useRouter();
 
   const handleMentorClick = (name) => {
     if (name) {
-      useRouter.push(`/mentor/${name}`);
+      // router.push(`/mentor/${name}`);
+      router.push(`/mentor`);
     }
   };
 
@@ -28,6 +29,7 @@ const CardComponent = ({ mentors }) => {
                   alt="image"
                   objectFit="cover"
                   layout="fill"
+                  sizes="fill"
                 />
               </CardHeader>
               <CardBody className="overflow-visible py-2 gap-5 mt-4 w-3/4">
